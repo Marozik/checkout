@@ -1307,6 +1307,16 @@ body {
   color: #365293;
 }
 
+.iti {
+  width: 100%;
+}
+
+.iti__selected-flag {
+  height: 40px;
+  border-right: 1px solid #cfcfcf;
+  background-color: rgba(245, 245, 245, 0.9607843137);
+}
+
 @media (min-width: 47.99875em) {
   .header__list {
     -webkit-box-flex: 1;
