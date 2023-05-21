@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<title>Checkout</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230522011302">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img src="img/header/logo.jpg" alt="Header logo" />
+				</div>
+				<ul class="header__list list-header">
+					<li class="list-header__item list-header__item_green">Dados pessoais</li>
+					<li class="list-header__item">Detalhes do Pagamento</li>
+					<li class="list-header__item">Pedido finalizado</li>
+				</ul>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="page__checkout checkout">
+				<div class="checkout__container">
+					<div class="checkout__items">
+						<artticle class="item-checkout item-checkout_1">
+							<div class="item-checkout__inner">
+								<h2 class="item-checkout__title item-checkout__title_user">Dados pessoais</h2>
+								<div class="item-checkout__text">
+									<p>Solicitamos apenas as informações essenciais para você fazer sua compra.</p>
+								</div>
+								<form action="#" class="item-checkout__form user-form">
+									<div class="user-form__line">
+										<label for="name" class="user-form__label">Nome completo</label>
+										<input type="text" data-validate data-error="Verifique a validade do Nome" required name="name" id="name" autocomplete="off" class="user-form__input" />
+									</div>
+									<div class="user-form__line">
+										<label for="email" class="user-form__label">E-mail</label>
+										<input type="email" data-validate data-error="Verifique a autenticidade do e-mail" required name="email" id="email" class="user-form__input" />
+									</div>
+									<div class="user-form__line">
+										<label for="cpf" class="user-form__label">CPF</label>
+										<input type="text" data-validate data-error="Verifique a validade do CPF" required oninput="this.value = this.value.replace(/[^0-9.-]/g, '');" name="cpf" id="cpf" autocomplete="off" maxlength="14" class="cpf user-form__input" />
+									</div>
+									<div class="user-form__line">
+										<label for="cep" class="user-form__label">CEP</label>
+										<input type="cep" required data-validate data-error="Verifique a validade do CEP" oninput="this.value = this.value.replace(/[^0-9]/g, '');" maxlength="8" name="cep" id="cep" autocomplete="off" class="user-form__input" />
+									</div>
+									<div class="user-form__line">
+										<label for="phone" class="user-form__label">Celular / WhatsApp</label>
+										<input type="tel" data-validate data-error="Verifique a autenticidade do telefone" required oninput="this.value = this.value.replace(/[^0-9]/g, '');" id="phone" class="user-form__input phone-input" name="tel" />
+									</div>
+									<button type="submit" class="user-form__button button">Continuar</button>
+								</form>
+							</div>
+						</artticle>
+						<artticle class="item-checkout item-checkout_2">
+							<form action="#" class="item-checkout__inner">
+								<h2 class="item-checkout__title item-checkout__title_payment">Pagamento</h2>
+								<div class="item-checkout__text">
+									<p>Preecha suas informações de entrega para continuar</p>
+								</div>
+								<div class="item-checkout__radio radio">
+									<div class="radio-item">
+										<input id="pix" checked type="radio" name="payment-method" value="pix" class="radio-item__input" />
+										<label for="pix" class="radio-item__label label-radio">
+											<div class="label-radio__inner">
+												<div class="label-radio__logo">
+													<img src="img/pix-logo.png" alt="Pix logo" />
+												</div>
+												<div class="label-radio__text">Pix</div>
+												<div class="label-radio__discount">5% de desconto</div>
+											</div>
+										</label>
+										<div class="radio-item__body">
+											<div class="radio-item__text">
+												<p>A confirmação de pagamento é realizada em poucos minutos. Utilize o aplicativo do seu banco para pagar.</p>
+											</div>
+											<div class="radio-item__price">Valor no Pix: R$ 28,41</div>
+											<div class="radio-item__offer"><span>🎉 </span>VOCÊ TEM 1 OFERTA!</div>
+											<div class="radio-item__about-offer about-offer">
+												<div class="about-offer__top">
+													<div class="about-offer__image">
+														<img src="img/minecarft-exclusive.jpg" alt="Minecraft exclusivo" />
+													</div>
+													<div class="about-offer__column">
+														<h4 class="about-offer__title">
+															<span>Receba o</span> <br />
+															Minecraft Exclusivo <br />
+															<span>por</span>
+														</h4>
+														<div class="about-offer__price">+ R$ 34,90</div>
+													</div>
+												</div>
+												<div class="about-offer__body">
+													<div class="about-offer__text">
+														<p>
+															<span>Oferta Exclusiva de Upgrade</span> <br />
+															Por mais R$34,90 receba o Minecraft Exclusivo Java e Bedrock ao invés da versão Básica.
+														</p>
+													</div>
+													<div class="about-offer__checkbox">
+														<input type="checkbox" id="exclusive" name="add-offer" class="about-offer__input" />
+														<label for="exclusive" class="about-offer__label">Quero Minecraft Exclusivo</label>
+													</div>
+												</div>
+												<div class="about-offer__bottom">
+													<p>
+														Porque você está comprando: <br />
+														<span>Jogo Minecraft - Acesso Básico</span>
+													</p>
+												</div>
+											</div>
+											<button type="submit" class="radio-item__button button">Comprar agora</button>
+										</div>
+									</div>
+								</div>
+								<div class="item-checkout__radio radio">
+									<div class="radio-item">
+										<input id="card" type="radio" name="payment-method" value="card" class="radio-item__input" />
+										<label for="card" class="radio-item__label label-radio">
+											<div class="label-radio__top">
+												<div class="label-radio__text">Cartão de crédito</div>
+												<div class="label-radio__cards">
+													<img src="img/cards.jpg" alt="Credit cards" />
+												</div>
+											</div>
+										</label>
+										<div class="radio-item__body">
+											<div class="radio-item__card card">
+												<div class="card__line">
+													<label for="card-number" class="card__label">Número do cartão</label>
+													<input type="text" required data-validate data-error="Verifique a validade número do cartão" oninput="this.value = this.value.replace(/[^0-9 ]/g, '');" id="card-number" name="card-number" maxlength="19" class="card__input" />
+												</div>
+												<div class="card__line">
+													<label for="card-owner" class="card__label">Nome</label>
+													<input type="text" required data-validate data-error="Verifique a validade número do Nome" id="card-owner" name="card-owner" class="card__input" />
+												</div>
+												<div class="card__lines">
+													<div class="card__line">
+														<label for="card-expire" class="card__label">Data de validade</label>
+														<input type="text" required data-validate data-error="Verifique a validade número do Data" oninput="this.value = this.value.replace(/[^0-9/]/g, '');" id="card-expire" name="card-expire" maxlength="5" class="card__input" />
+													</div>
+													<div class="card__line">
+														<label for="card-cvc" class="card__label">CVC</label>
+														<input type="text" required data-validate data-error="Verifique a validade número do CVC" oninput="this.value = this.value.replace(/[^0-9]/g, '');" id="card-cvc" name="card-cvc" maxlength="3" class="card__input" />
+													</div>
+												</div>
+											</div>
+											<button type="submit" class="radio-item__button button">Comprar agora</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</artticle>
+						<artticle class="item-checkout item-checkout_3">
+							<div class="item-checkout__offer offer">
+								<div class="offer__image">
+									<img src="img/timer-icon.png" alt="Timer icon" />
+								</div>
+								<div class="offer__body">
+									<h3 class="offer__title">Oferta acabando: 15:00</h3>
+									<div class="offer__text">
+										<p>As entregas são feitas para o Email utilizado para pagamento logo após aprovação.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-checkout__inner">
+								<h1 class="item-checkout__big-title">RESUMO DA COMPRA</h1>
+								<div class="item-checkout__goods goods">
+									<div class="goods__image">
+										<img src="img/minecarft-basic.jpg" alt="Goods image" />
+									</div>
+									<div class="goods__description">Minecraft Básico Acesso Básico Completo</div>
+								</div>
+								<div class="item-checkout__prices prices">
+									<div class="prices__items">
+										<div class="prices__item">
+											<div class="prices__name">Produtos</div>
+											<div class="prices__value"><span>R$</span>29,90</div>
+										</div>
+									</div>
+									<div class="prices__total total-price">
+										<div class="total-price__name">Total</div>
+										<div class="total-price__value"><span>R$</span>29,90</div>
+									</div>
+								</div>
+							</div>
+						</artticle>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer-new">
+			<div class="footer-new__top top-footer">
+				<div class="top-footer__container">
+					<div class="top-footer__garanty">
+						<img src="img/footer/garanty-image.png" alt="Garanty" />
+					</div>
+					<ul class="top-footer__payments list-payments">
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-01.png" alt="Payment method" />
+						</li>
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-02.png" alt="Payment method" />
+						</li>
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-03.png" alt="Payment method" />
+						</li>
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-04.png" alt="Payment method" />
+						</li>
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-05.png" alt="Payment method" />
+						</li>
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-06.png" alt="Payment method" />
+						</li>
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-07.png" alt="Payment method" />
+						</li>
+						<li class="list-payments__item">
+							<img src="img/footer/payments/image-08.png" alt="Payment method" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-new__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<div class="bottom-footer__text">
+						<p>
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+						</p>
+						<p>
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <br />
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+						</p>
+					</div>
+					<div class="bottom-footer__logo">
+						<img src="img/footer/logo.svg" alt="Footer logo" />
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="js/app.min.js?_v=20230522011302"></script>
+</body>
+
+</html>
